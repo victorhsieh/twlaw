@@ -42,6 +42,7 @@ add_record = (record) ->
         delete record.proposed_by
 
     record.progress = [{date: record.proposal_date, status: \new}]
+    record.status = \new
     if record.progress_tmp?
         # TODO follow the link for detail, if that helps
         [link, ...events] = split_lines record.progress_tmp
